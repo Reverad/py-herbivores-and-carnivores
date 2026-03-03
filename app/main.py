@@ -29,8 +29,8 @@ class Herbivore(Animal):
 
 
 class Carnivore(Animal):
-    def bite(self, herbivore: Herbivore) -> None:
-        if isinstance(herbivore, Herbivore) and herbivore.hidden is False:
-            herbivore.health -= 50
-            if herbivore in Animal.alive and herbivore.health <= 0:
-                Animal.alive.remove(herbivore)
+    def bite(self, target: Animal) -> None:
+        if isinstance(target, Herbivore) and target.hidden is False:
+            target.health -= 50
+            if target in Animal.alive and target.health <= 0:
+                Animal.alive.remove(target)

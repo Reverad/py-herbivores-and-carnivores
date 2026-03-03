@@ -2,7 +2,7 @@ from __future__ import annotations
 
 
 class Animal:
-    alive = []
+    alive: list[Animal] = []
 
     def __init__(
             self,
@@ -17,8 +17,7 @@ class Animal:
 
     def __repr__(self) -> str:
         return (
-            f"{{"
-            f"Name: {self.name}, "
+            f"{{Name: {self.name}, "
             f"Health: {self.health}, "
             f"Hidden: {self.hidden}}}"
         )
